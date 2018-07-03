@@ -21,7 +21,7 @@ patterns:
 - name: keyword.operator.ansible
   match: \b(?:not)\b
   
-- match: ^\s*(?:- )?(name|include):\s+(.*)$
+- match: ^\s*(?:- )?(name|(?:(?:include|import)(?:_(?:tasks|roles)))):\s+(.*)$
   captures:
     '1': {name: keyword.other.ansible}
     '2': {name: entity.name.function.ansible}
